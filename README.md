@@ -1,6 +1,10 @@
 # Credit-Risk-Classification-Pipeline
 A machine learning pipeline that predicts credit risk (good/bad) for loan applicants using the German Credit Dataset. Built with Python and deployed as an interactive web app using Streamlit.
 
+### Live Demo 
+https://credit-risk-classification-pipeline-jlbzwdflsyq7xketnpd7hp.streamlit.app/
+
+
 ## Overview
 
 This project benchmarks multiple supervised ML models to identify the best-performing algorithm for credit risk classification. The final model is deployed via a Streamlit interface where users can input applicant details and receive an instant risk prediction.
@@ -40,6 +44,7 @@ credit-risk-pipeline
 |-- Housing_encoder.pkl
 |-- Saving accounts_encoder.pkl
 |-- Checking account_encoder.pkl
+|-- requirements.txt
 |-- README.md
 
 ```
