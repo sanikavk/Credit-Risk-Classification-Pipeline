@@ -126,14 +126,14 @@ with left_col:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.metric("Age", age)
-        st.metric("Job Level", job)
-        st.metric("Duration", f"{duration} Months")
+        st.write(f"**Age:** {age}")
+        st.write(f"**Job Level:** {job}")
+        st.write(f"**Duration:** {duration} Months")
 
     with col2:
-        st.metric("Credit Amount", f"£{credit_amount:,}")
-        st.metric("Housing", housing.title())
-        st.metric("Sex", sex.title())
+        st.write(f"**Credit Amount:** ₹{credit_amount:,}")
+        st.write(f"**Housing:** {housing.title()}")
+        st.write(f"**Sex:** {sex.title()}")
 
 
 # RIGHT PANEL
@@ -147,15 +147,11 @@ with right_col:
         good_prob = st.session_state.proba[1] * 100
         bad_prob = st.session_state.proba[0] * 100
 
-        st.metric(
-            "Good Risk Probability",
-            f"{good_prob:.1f}%"
-        )
+        st.write(f"### Good Risk Probability: {good_prob:.1f}%")
+        st.progress(good_prob / 100)
 
-        st.metric(
-            "Bad Risk Probability",
-            f"{bad_prob:.1f}%"
-        )
+        st.write(f"### Bad Risk Probability: {bad_prob:.1f}%")
+        st.progress(bad_prob / 100)
 
     else:
         st.info("Run a prediction to view probabilities.")
